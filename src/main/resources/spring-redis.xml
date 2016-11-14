@@ -24,9 +24,9 @@
 		<constructor-arg index="4" type="boolean">
 			<value>true</value>
 		</constructor-arg>
-		<!-- <constructor-arg index="5" type="java.lang.String">
+		<constructor-arg index="5" type="java.lang.String">
 			<value>${battcn.redis.password}</value>
-		</constructor-arg> -->
+		</constructor-arg>
 	</bean>
 	
 	<bean id="redisOperator" class="com.battcn.framework.redis.impl.RedisOperatorImpl">
@@ -34,7 +34,8 @@
 	</bean>
 	
 	<bean id="managerCache" class="com.battcn.platform.cache.ManagerCacheAop"/>
-	<!-- <aop:config>
+	<!-- 1.该案例为 AOP操作Redis
+	<aop:config>
 		<aop:aspect id="managerCached" ref="managerCache" order="9">
 			<aop:after method="save" arg-names="dto" pointcut="execution(* com.battcn.platform.dao.ManagerDAO.insertSelective(..)) and args(dto) || execution(* com.battcn.platform.dao.ManagerDAO.updateByPrimaryKey(..)) and args(dto)"/>     
             <aop:after method="deleteByKey"  arg-names="id"   pointcut="execution(* com.battcn.platform.dao.ManagerDAO.deleteByPrimaryKey(..)) and args(id)"/>  
