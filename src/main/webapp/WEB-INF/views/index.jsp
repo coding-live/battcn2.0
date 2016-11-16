@@ -16,7 +16,7 @@
 				<ul class="nav" id="side-menu">
 					<li class="nav-header">
 						<div class="dropdown profile-element">
-							<span><img alt="image" class="img-circle" src="http://static.battcn.com/common/favicon.png" width="64px" height="64px"/></span> <a
+							<span><img alt="image" class="img-circle" src="<c:choose><c:when test='${empty USER_SESSION_KEY.photo}'>http://static.battcn.com/common/favicon.png</c:when><c:otherwise>${USER_SESSION_KEY.photo}</c:otherwise></c:choose>" width="64px" height="64px"/></span> <a
 								data-toggle="dropdown" class="dropdown-toggle" href="#"> <span
 								class="clear"> <span class="block m-t-xs"><strong
 										class="font-bold">${USER_SESSION_KEY.name}</strong></span> <span
@@ -24,7 +24,7 @@
 							</span>
 							</a>
 							<ul class="dropdown-menu animated fadeInRight m-t-xs">
-								<li><a class="J_menuItem" href="${ctx}/user/profile.shtml">修改头像</a>
+								<li><a class="J_menuItem" href="${ctx}/profile.shtml">修改头像</a>
 								</li>
 								<li><a class="J_menuItem">个人资料</a></li>
 								<li><a class="J_menuItem">联系我们</a></li>
@@ -56,8 +56,7 @@
 				</button>
 				<nav class="page-tabs J_menuTabs">
 					<div class="page-tabs-content">
-						<a href="javascript:void(0);" class="J_menuTab active main"
-							id="main" data-id="main.shtml">首页</a>
+						<a href="javascript:void(0);" class="J_menuTab active main" id="main" data-id="main">首页</a>
 					</div>
 				</nav>
 				<button class="roll-nav roll-right J_tabRight">
@@ -83,7 +82,7 @@
 
 			<div class="row J_mainContent bbg" id="content-main">
 				<div class="J_box smartmenu index" width="100%" name="iframe0"
-					data-id="main.shtml" height="100%" src="${ctx}/main.shtml"></div>
+					data-id="main" height="100%" src="${ctx}/main"></div>
 			</div>
 			<div class="footer">
 				<div class="my-pull-right">

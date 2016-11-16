@@ -99,7 +99,7 @@ public class ManagerServiceImpl extends BaseService<ManagerEntity> implements Ma
 	@Override
 	public void update(ManagerEntity dto)
 	{
-		this.managerMapper.update(dto);
+		this.managerMapper.updateByPrimaryKeySelective(dto);
 	}
 
 }

@@ -33,7 +33,6 @@
 								class="btn btn-w-m btn-info button_shutter"><i
 								class="fa fa-camera"></i> 拍照</a>
 						</p>
-						<div id="userAlbums" style="display: none"></div>
 					</div>
 				</div>
 			</div>

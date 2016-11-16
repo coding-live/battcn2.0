@@ -62,9 +62,12 @@ function fullAvatarEditor() {
 	var swf = null;
 	var callbackFn = function(e) {
 		swf = e.ref;
-		swf.eventHandler = function(json) {
-			callback.call(swf, json);
-		};
+		if(swf!=null)
+		{
+			swf.eventHandler = function(json) {
+				callback.call(swf, json);
+			};
+		}
 	};
 	swfobject.embedSWF(file, container, width, height, version, expressInstall,
 			vars, params, attributes, callbackFn);

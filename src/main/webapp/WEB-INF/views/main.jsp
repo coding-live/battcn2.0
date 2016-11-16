@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<div class="row  border-bottom white-bg dashboard-header">
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<div class="row  border-bottom white-bg dashboard-header animated fadeInRight">
 	<div class="col-sm-4">
 		<div class="ibox float-e-margins">
 			<div class="ibox-title">
@@ -72,7 +71,7 @@
 		</div>
 	</div>
 </div>
-<div class="wrapper wrapper-content">
+<div class="wrapper wrapper-content animated fadeInRight">
 	<div class="row">
 		<div class="col-sm-5">
 			<div class="ibox float-e-margins">
