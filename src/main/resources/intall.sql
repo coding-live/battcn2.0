@@ -1,4 +1,4 @@
-/*
+﻿/*
 Navicat MySQL Data Transfer
 
 Source Server         : localhost-3306
@@ -227,7 +227,8 @@ INSERT INTO `t_sys_operate` VALUES ('41', '34', 'add', '新增', 'add', null, '2
 INSERT INTO `t_sys_operate` VALUES ('42', '34', 'edit', '编辑', 'edit', null, '3', '1');
 INSERT INTO `t_sys_operate` VALUES ('43', '34', 'generate', '生成', 'generate', null, '4', '1');
 INSERT INTO `t_sys_operate` VALUES ('44', '35', 'list', '查看', 'list', '跳转JSON序列化页面', '1', '1');
-INSERT INTO `t_sys_operate` VALUES ('45', '36', 'list', '查看', 'ist', '查看接口文档', '1', '1');
+INSERT INTO `t_sys_operate` VALUES ('45', '36', 'list', '查看', 'list', '查看接口文档', '1', '1');
+INSERT INTO `t_sys_operate` VALUES ('46', '34', 'remove', '删除', 'remove', '删除代码生成', '5', '1');
 
 -- ----------------------------
 -- Table structure for t_sys_role
@@ -325,6 +326,7 @@ INSERT INTO `t_sys_role_operate` VALUES ('1', '42');
 INSERT INTO `t_sys_role_operate` VALUES ('1', '43');
 INSERT INTO `t_sys_role_operate` VALUES ('1', '44');
 INSERT INTO `t_sys_role_operate` VALUES ('1', '45');
+INSERT INTO `t_sys_role_operate` VALUES ('1', '46');
 
 
 -- tree的存储过程
