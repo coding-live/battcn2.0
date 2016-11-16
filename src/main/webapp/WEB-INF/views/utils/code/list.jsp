@@ -133,7 +133,8 @@ battcn.admin.menu${OP.menu}.edit = function(){
 
 				ps.push(n.uuid);
 			});
-			alert(rootPath);
+			console.info(rootPath)
+//			alert();
 			$.ajax({
 		          type: 'post',
 		          url: rootPath + '/op_remove_${OP.menu}.shtml',
