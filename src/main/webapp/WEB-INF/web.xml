@@ -22,7 +22,7 @@
 	</filter-mapping>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-shiro.xml,classpath:spring-application.xml</param-value>
+		<param-value>classpath:spring/spring-application.xml,classpath:spring/spring-shiro.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -47,17 +47,16 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring-mvc.xml</param-value>
+			<param-value>classpath:spring/spring-mvc.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
-		<url-pattern>*.shtml</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	<!-- <servlet-mapping> <servlet-name>springmvc</servlet-name> <url-pattern>/swagger-resources</url-pattern> 
-		</servlet-mapping> -->
+
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>/v2/api-docs</url-pattern>

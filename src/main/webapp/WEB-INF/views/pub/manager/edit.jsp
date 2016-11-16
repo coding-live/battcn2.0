@@ -76,16 +76,19 @@
 					<input name="password" id="password" class="form-control"
 						validate="{<c:choose><c:when test="${empty dto.managerid}">required: true,</c:when><c:otherwise></c:otherwise></c:choose> minlength:4,maxlength:20,messages:{<c:if test="${empty dto.managerid}">required:'请填写密码',</c:if>minlength:'密码必须大于等于4',maxlength:'密码必须小于等于20'}}"
 						type="password">
+					${dto != null && dto.managerid != null ? '<span style="color: red;">不填为则不修改密码</span>' : ''}
 				</div>
 			</div>
-			<div class="form-group">
-				<label class="col-sm-3 control-label">确认密码：</label>
-				<div class="col-sm-8">
-					<input name="rePassword" class="form-control" type="password"
-						validate="{<c:if test="${empty dto.managerid}">required:true,</c:if>equalTo:'#password',messages:{<c:if test="${empty dto.managerid}">required:'请填写重复密码',</c:if>equalTo:'两次密码输入不一致'}}">
-					<span style="color: red;">不填为则不修改密码</span>
+			<c:if test="${dto == null || dto.managerid == null}">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">确认密码：</label>
+					<div class="col-sm-8">
+						<input name="rePassword" class="form-control" type="password"
+							validate="{required:true,equalTo:'#password',messages:{<c:if test="${empty dto.managerid}">required:'请填写重复密码',</c:if>equalTo:'两次密码输入不一致'}}">					
+					</div>
 				</div>
-			</div>
+			</c:if>
+			
 			<div class="form-group">
 				<label class="col-sm-3 control-label">状态：</label>
 				<div class="col-sm-8">

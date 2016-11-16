@@ -89,7 +89,7 @@ public class ManagerServiceImpl extends BaseService<ManagerEntity> implements Ma
 			{
 				dto.setPassword(null);
 			}
-			this.managerMapper.updateByPrimaryKey(dto);
+			this.managerMapper.updateByPrimaryKeySelective(dto);
 		}
 		json.setSuccess(true);
 		json.setMsg("保存成功！");
