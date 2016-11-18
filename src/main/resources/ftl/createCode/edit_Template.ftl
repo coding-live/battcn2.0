@@ -6,7 +6,7 @@
   		if($("#menu${(OP.menu)!'$'+'{OP.menu}'}Form").valid()){
   			$.ajax({
 				type: "POST", 
-				url: rootPath + "/op_save_${(OP.menu)!'$'+'{OP.menu}'}.shtml",
+				url: rootPath + "/op_save_${(OP.menu)!'$'+'{OP.menu}'}",
 				data: $('#menu${(OP.menu)!'$'+'{OP.menu}'}Form').serializeArray(),
 				dataType: "json",
 				success: function(data){

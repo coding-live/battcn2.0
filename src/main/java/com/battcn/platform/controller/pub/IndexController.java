@@ -48,8 +48,8 @@ public class IndexController extends BaseController
 			model.addAttribute("operates", op);
 			model.addAttribute("OP",op.get(0));
 			model.addAttribute("MENU",this.menuService.findMenuByPrimaryKey(id));// 获取对应的菜单对象
-			System.out.println("forward:" + menu.getChannel() + "/" + oper + ".shtml");
-			return "forward:" + menu.getChannel() + "/" + oper + ".shtml";
+			System.out.println("forward:" + menu.getChannel() + "/" + oper);
+			return "forward:" + menu.getChannel() + "/" + oper;
 		}
 		return "404";
 	}

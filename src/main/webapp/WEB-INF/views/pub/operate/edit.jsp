@@ -84,22 +84,10 @@
   $(function(){
 	  	battcn.admin.menu${OP.menu}.save = function() {
 	  	if($("#menu${OP.menu}Form").valid()){
-  			$.ajax({
-				type: "POST", 
-				url: rootPath + "/op_save_${OP.menu}.shtml",
-				data: $('#menu${OP.menu}Form').serializeArray(),
-				dataType: "json",
-				success: function(data){
-					if(data.success) {
-						battcn.closeWindow();
-						$('#admin_menu${OP.menu}_datagrid').bootstrapTable('refresh');
-					}
-					battcn.toastrsAlert({
-		       		     code: data.success ? 'success' :'error',
-		       		     msg: data.success ? '成功' :'失败'
-		       		});
-				}
-			});
+	  		battcn.ajaxJson({url:rootPath + "/op_save_${OP.menu}",data:$('#menu${OP.menu}Form').serializeArray()},function(){
+	  			battcn.closeWindow();
+				$('#admin_menu${OP.menu}_datagrid').bootstrapTable('refresh');
+    		});
   		}
 	}
 });

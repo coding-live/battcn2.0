@@ -5,7 +5,7 @@
     $(function(){
     	 battcn.ns('battcn.admin.menu${OP.menu}');
     	 $('#admin_menu${OP.menu}_datagrid').bootstrapTable({ 
-             url:rootPath + '${MENU.channel}/query.shtml',
+             url:rootPath + '${MENU.channel}/query',
              height: '100%',
              sortName: 'name',
              sortOrder: 'desc',
@@ -77,7 +77,7 @@
 battcn.admin.menu${OP.menu}.add = function(){
 	battcn.showWindow({
 			title:'增加操作',
-			href:rootPath + '/op_edit_${OP.menu}.shtml',
+			href:rootPath + '/op_edit_${OP.menu}',
 			width:'50%',
 			height:'70%',
 			okhandler:function(){
@@ -98,7 +98,7 @@ battcn.admin.menu${OP.menu}.edit = function(){
 		case 1:
 			battcn.showWindow({
 				title:'编辑操作',
-				href:rootPath + '/op_edit_${OP.menu}.shtml?menu='+rows[0].menu+'&op='+rows[0].op,
+				href:rootPath + '/op_edit_${OP.menu}?menu='+rows[0].menu+'&op='+rows[0].op,
 				width:'50%',
 				height:'70%',
 				okhandler:function(){
@@ -131,7 +131,7 @@ battcn.admin.menu${OP.menu}.edit = function(){
 	    	});
 	    	$.ajax({
 	            type: 'post',
-	            url: rootPath + '/op_remove_${OP.menu}.shtml',
+	            url: rootPath + '/op_remove_${OP.menu}',
 	            data: {"ids":ps.join(",")},
 	            dataType: 'json',
 	            success: function (data) {

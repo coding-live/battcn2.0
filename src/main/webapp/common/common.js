@@ -21,6 +21,40 @@
 		$.extend(pp, params);
 		$.ajax(pp);
 	});
+	
+	battcn.ajaxJson = (function(options,callback) {
+		var dataType = options.dataType == undefined  ? 'json' : options.dataType;
+		if(options.url == undefined)
+		{
+			layer.alert("请输入battcn.ajax的URL地址");
+			return;
+		}
+		var url = options.url;
+		if (url.indexOf("?") > -1) {
+			url = url + "&_t=" + new Date();
+		} else {
+			url = url + "?_t=" + new Date();
+		}
+		$.ajax({
+	          type: 'post',
+		      url: url,
+	          data: options.data,
+	          dataType: dataType,
+	          success: function (data) {
+	        	  if(data.success) {
+	        		  if(typeof callback == "function") 
+		        	  {
+	        			  callback();
+		        	  } 
+	        	  }
+		          battcn.toastrsAlert({
+		          	code: data.success ? 'success' :'error',
+		          	msg: data.msg
+		          });
+	          }
+	    });
+	});
+	
 	battcn.ajaxSubmit = (function(form, params) {// form 表单ID. params ajax参数
 		var pp = {
 			error : function(XMLHttpRequest, textStatus, errorThrown) {

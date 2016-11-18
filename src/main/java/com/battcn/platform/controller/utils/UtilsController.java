@@ -8,8 +8,8 @@ import com.battcn.platform.controller.BaseController;
 import springfox.documentation.annotations.ApiIgnore;
 
 /**
- * @ClassName: CreateCodeController
- * @Description: 代码生成器
+ * @ClassName: UtilsController
+ * @Description: 工具栏跳转
  * @author 唐亚峰
  * @date 2016年10月9日
  */
@@ -26,8 +26,13 @@ public class UtilsController extends BaseController
 	@RequestMapping(value = "/utils/docs/list")
 	public String docs()
 	{
-		//return "redirect:/springfox/index.html";
 		return "utils/docs/list";
+	}
+	
+	@RequestMapping("/usils/cron/list")
+	public String cron()
+	{
+		return "utils/cron/list";
 	}
 	
 }

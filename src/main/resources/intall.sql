@@ -1,4 +1,4 @@
-﻿/*
+/*
 Navicat MySQL Data Transfer
 
 Source Server         : localhost-3306
@@ -36,67 +36,21 @@ CREATE TABLE `t_sys_logs` (
 -- ----------------------------
 -- Records of t_sys_logs
 -- ----------------------------
-INSERT INTO `t_sys_logs` VALUES ('11', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:35', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('12', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:38:39', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('13', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:45:04', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('14', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:53:56', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('15', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:56:00', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('7', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:17', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('8', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:19', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('9', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:20', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('10', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:21', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('16', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:00:41', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('17', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:00:47', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('18', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:01:01', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('19', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:05:13', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('20', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:05:51', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('21', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:07:41', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('22', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:11:14', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('23', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:29:19', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('24', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:32:05', '0:0:0:0:0:0:0:1', '9', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('25', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:32:33', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('26', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:35:28', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('27', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:38:40', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('28', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:39:12', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('29', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:40:31', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('30', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:43:16', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('31', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:45:19', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('32', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:50:27', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('33', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:55:04', '0:0:0:0:0:0:0:1', '9', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('34', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:58:29', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('35', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:59:38', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('36', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:01:16', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('37', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:01:30', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('38', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:02:10', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('39', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:02:58', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('40', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:03:44', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('41', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:10:16', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('42', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:13:22', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('43', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:15:51', '0:0:0:0:0:0:0:1', '9', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('44', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:16:49', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('45', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:17:30', '0:0:0:0:0:0:0:1', '9', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('46', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:18:20', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('47', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 17:19:19', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('48', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:43:27', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('49', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:48:11', '0:0:0:0:0:0:0:1', '9', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('50', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:50:23', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('51', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:52:14', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('52', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:53:13', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('53', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:53:54', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('54', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:54:52', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('55', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:55:30', '0:0:0:0:0:0:0:1', '9', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('56', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:55:54', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('57', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 08:56:27', '0:0:0:0:0:0:0:1', '9', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('58', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 09:00:04', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('59', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 10:14:16', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('60', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 10:49:25', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('61', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 11:46:38', '127.0.0.1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('62', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 12:04:39', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('63', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 12:08:29', '127.0.0.1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('64', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-25 13:47:16', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('65', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-10-09 15:52:40', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('66', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-10-10 18:40:44', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
-INSERT INTO `t_sys_logs` VALUES ('67', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-10-18 13:50:16', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list.shtml');
+INSERT INTO `t_sys_logs` VALUES ('11', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:35', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('12', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:38:39', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('13', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:45:04', '0:0:0:0:0:0:0:1', '7', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('14', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:53:56', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('15', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:56:00', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('7', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:17', '0:0:0:0:0:0:0:1', '8', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('8', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:19', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('9', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:20', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('10', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 15:37:21', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('16', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:00:41', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('17', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:00:47', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('18', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:01:01', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('19', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:05:13', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+INSERT INTO `t_sys_logs` VALUES ('20', 'admin', '日志模块', '日志list', '进入日志查询的页面', '2016-09-15 16:05:51', '0:0:0:0:0:0:0:1', '0', null, '/pub/logs/list');
+
 
 -- ----------------------------
 -- Table structure for t_sys_manager
@@ -128,7 +82,7 @@ CREATE TABLE `t_sys_manager` (
 -- ----------------------------
 INSERT INTO `t_sys_manager` VALUES ('1', 'admin', 'a122080ba7afebf036ed3c811c7880f9', '1', '秋殇', '0:0:0:0:0:0:0:1', '2016-10-23 14:31:37', '9c6c9e22ae8c773c8f07a75b28563152', '1', null, null, '男', null, null);
 INSERT INTO `t_sys_manager` VALUES ('3', 'memmsc', 'ffaf9b705d272055372cc3995ce2d448', '2', '唐亚峰', '0:0:0:0:0:0:0:1', '2016-07-21 16:20:46', '1da611f87449065cb4ea69e6a432d1af', '1', null, null, '女', null, null);
-INSERT INTO `t_sys_manager` VALUES ('7', 'test', '11dcaf1cff1e45925a53e27a38252496', '2', 'test2', null, null, '2ba6bb8e0d584646b3225fd4785df199', '1', null, null, null, null, null);
+INSERT INTO `t_sys_manager` VALUES ('7', 'test', '11dcaf1cff1e45925a53e27a38252496', '2', 'test2', '0:0:0:0:0:0:0:1', '2016-07-21 16:20:46', '2ba6bb8e0d584646b3225fd4785df199', '1', null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for t_sys_menu
@@ -171,6 +125,9 @@ INSERT INTO `t_sys_menu` VALUES ('33', '鏖战工具', '鏖战工具', 'fa fa-co
 INSERT INTO `t_sys_menu` VALUES ('34', '代码生成', '代码生成', 'fa fa-cogs', '/utils/code', 'utils:code', '2016-10-09 15:57:14', '2016-10-09 15:57:16', '1', '33', '1', '1', ',33,34,', null);
 INSERT INTO `t_sys_menu` VALUES ('35', '在线格式化', '在线格式化', 'fa fa-cogs', '/utils/json', 'utils:json', '2016-10-23 11:00:21', '2016-10-23 11:00:24', '1', '33', '2', '1', ',33,35,', null);
 INSERT INTO `t_sys_menu` VALUES ('36', '接口文档', '接口文档', 'fa fa-cogs', '/utils/docs', 'utils:docs', '2016-10-23 11:07:55', '2016-10-23 11:07:59', '1', '33', '1', '1', ',33,36,', null);
+INSERT INTO `t_sys_menu` VALUES ('37', 'Cron表达式生成器', 'Cron表达式生成器', 'fa fa-cogs', '/usils/cron', 'utils:cron', '2016-11-17 10:30:25', '2016-11-17 10:30:27', '1', '33', '3', '1', ',33,37,', null);
+INSERT INTO `t_sys_menu` VALUES ('38', '调度管理', '调度管理', 'fa fa-cogs', '/quartz/sys', 'quartz:sys', '2016-11-18 10:38:11', '2016-11-18 10:38:13', '1', null, '1', '0', ',38,', null);
+INSERT INTO `t_sys_menu` VALUES ('39', '任务管理', '任务管理', 'fa fa-cogs', '/schedule/task', 'schedule:task', '2016-11-18 10:39:22', '2016-11-18 10:39:25', '1', '38', '1', '1', ',38,39,', null);
 
 -- ----------------------------
 -- Table structure for t_sys_operate
@@ -227,8 +184,12 @@ INSERT INTO `t_sys_operate` VALUES ('41', '34', 'add', '新增', 'add', null, '2
 INSERT INTO `t_sys_operate` VALUES ('42', '34', 'edit', '编辑', 'edit', null, '3', '1');
 INSERT INTO `t_sys_operate` VALUES ('43', '34', 'generate', '生成', 'generate', null, '4', '1');
 INSERT INTO `t_sys_operate` VALUES ('44', '35', 'list', '查看', 'list', '跳转JSON序列化页面', '1', '1');
-INSERT INTO `t_sys_operate` VALUES ('45', '36', 'list', '查看', 'list', '查看接口文档', '1', '1');
+INSERT INTO `t_sys_operate` VALUES ('45', '36', 'list', '查看', 'ist', '查看接口文档', '1', '1');
 INSERT INTO `t_sys_operate` VALUES ('46', '34', 'remove', '删除', 'remove', '删除代码生成', '5', '1');
+INSERT INTO `t_sys_operate` VALUES ('47', '37', 'list', '查看', 'list', 'Cron表达式生成器', '6', '1');
+INSERT INTO `t_sys_operate` VALUES ('48', '38', 'list', '查看', 'list', '调度管理', '1', '0');
+INSERT INTO `t_sys_operate` VALUES ('49', '39', 'list', '查看', 'list', '任务管理', '1', '1');
+
 
 -- ----------------------------
 -- Table structure for t_sys_role
@@ -327,6 +288,38 @@ INSERT INTO `t_sys_role_operate` VALUES ('1', '43');
 INSERT INTO `t_sys_role_operate` VALUES ('1', '44');
 INSERT INTO `t_sys_role_operate` VALUES ('1', '45');
 INSERT INTO `t_sys_role_operate` VALUES ('1', '46');
+INSERT INTO `t_sys_role_operate` VALUES ('1', '47');
+INSERT INTO `t_sys_role_operate` VALUES ('1', '48');
+INSERT INTO `t_sys_role_operate` VALUES ('1', '49');
+
+
+-- ----------------------------
+-- Table structure for t_sys_schedule_job
+-- ----------------------------
+DROP TABLE IF EXISTS `t_sys_schedule_job`;
+CREATE TABLE `t_sys_schedule_job` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `createTime` timestamp NULL DEFAULT NULL,
+  `updateTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `jobName` varchar(64) DEFAULT NULL COMMENT '名字',
+  `jobGroup` varchar(128) DEFAULT NULL COMMENT '组',
+  `jobStatus` int(2) DEFAULT '1' COMMENT '状态',
+  `cronExpression` varchar(16) NOT NULL COMMENT 'cron表达式',
+  `description` varchar(255) DEFAULT NULL COMMENT '描述',
+  `beanClass` varchar(255) DEFAULT NULL COMMENT '类路径',
+  `isConcurrent` int(2) DEFAULT '1' COMMENT '是否同步',
+  `springId` varchar(255) DEFAULT NULL COMMENT 'Spring Bean的ID',
+  `methodName` varchar(255) NOT NULL COMMENT '方法名',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_group` (`jobName`,`jobGroup`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='任务调度';
+
+-- ----------------------------
+-- Records of t_sys_schedule_job
+-- ----------------------------
+INSERT INTO `t_sys_schedule_job` VALUES ('1', '2014-04-25 16:52:17', '2016-11-18 16:42:50', 'test1', 'test', '0', '0 0/1 * * * ?', 'test1', 'com.battcn.platform.task.TaskTest', '0', 'taskTest', 'run1');
+INSERT INTO `t_sys_schedule_job` VALUES ('2', '2014-04-25 16:52:17', '2016-11-18 16:42:52', 'test2', 'test', '1', '0 0/3 * * * ?', 'test2', 'com.battcn.platform.task.TaskTest', '1', 'taskTest', 'run2');
+INSERT INTO `t_sys_schedule_job` VALUES ('3', '2014-04-25 16:52:17', '2016-11-18 16:42:54', 'test3', 'test', '0', '0 0/5 * * * ?', 'test3', 'com.battcn.platform.task.TaskTest', '1', 'taskTest', 'run3');
 
 
 -- tree的存储过程

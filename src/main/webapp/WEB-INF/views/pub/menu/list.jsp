@@ -14,7 +14,7 @@
 			<%@ include file="/WEB-INF/views/common/toolbar.jsp"%>
 			<div class="table-responsive" style="margin-top: 20px;">
 				<form role="form" class="form-inline"
-					action="${ctx}/menu/list.shtml">
+					action="${ctx}/menu/list">
 					<table id="admin_menu${OP.menu}_datagrid"
 						class="table table table-striped table-bordered table-hover">
 						<thead>
@@ -109,12 +109,12 @@
 		}  );
 	}) 
 	$("#resources_meny>li").click(function(){
-		battcn.reloadDiv(rootPath+"/pub/menu/list.shtml?pageSize="+$(this).text());
-		//$(".J_mainContent div.J_box:visible").loadUrl(rootPath+"/pub/menu/list.shtml?pageSize="+$(this).text());
+		battcn.reloadDiv(rootPath+"/pub/menu/list?pageSize="+$(this).text());
+		//$(".J_mainContent div.J_box:visible").loadUrl(rootPath+"/pub/menu/list?pageSize="+$(this).text());
 	});
 	function loadResources(pageNum)
 	{
-		battcn.reloadDiv(rootPath+"/pub/menu/list.shtml?pageNum="+pageNum);
+		battcn.reloadDiv(rootPath+"/pub/menu/list?pageNum="+pageNum);
 	}
 	//删除
 	battcn.admin.menu${OP.menu}.remove = function(){
@@ -132,11 +132,11 @@
 		layer.confirm('是否删除？', function(index) {
 			$.ajax({
 		          type: 'post',
-		          url: rootPath + '/op_remove_${OP.menu}.shtml',
+		          url: rootPath + '/op_remove_${OP.menu}',
 		          data: {"ids":cbox.join(",")},
 		          dataType: 'json',
 		          success: function (data) {
-		          	battcn.reloadDiv(rootPath + '/op_list_${OP.menu}.shtml');
+		          	battcn.reloadDiv(rootPath + '/op_list_${OP.menu}');
 		          	battcn.closeWindow();
 		          	battcn.toastrsAlert({
 	              		 code: data.success ? 'success' :'error',
@@ -150,7 +150,7 @@
 	battcn.admin.menu${OP.menu}.add = function(){
 		battcn.showWindow({
 				title:'增加菜单',
-				href:'op_edit_${OP.menu}.shtml',
+				href:'op_edit_${OP.menu}',
 				width : '50%',
 				height : '70%',
 				okhandler:function(){
@@ -177,7 +177,7 @@
 		}
 		battcn.showWindow({
 			title : '编辑菜单',
-			href:'op_edit_${OP.menu}.shtml?id=' + cbox,
+			href:'op_edit_${OP.menu}?id=' + cbox,
 			width : '50%',
 			height : '70%',
 			okhandler:function(){

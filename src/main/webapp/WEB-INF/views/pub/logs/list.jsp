@@ -3,7 +3,7 @@
     $(function(){
     	 battcn.ns('battcn.admin.menu${OP.menu}');
     	 $('#admin_menu${OP.menu}_datagrid').bootstrapTable({ 
-             url:rootPath + '${MENU.channel}/query.shtml',
+             url:rootPath + '${MENU.channel}/query',
              height: '100%',
              sortName: 'account',
              sortOrder: 'desc',
@@ -76,8 +76,7 @@
    		//导出日志
    		battcn.admin.menu${OP.menu}.export = function(){ 
    			battcn.confirm(function(){
-   		    	//$.get(rootPath + "/op_export_${OP.menu}.shtml",function(){});
-   			 	location.href= rootPath + "/op_export_${OP.menu}.shtml";  
+   			 	location.href= rootPath + "/op_export_${OP.menu}";  
    			});
    		}
     	 

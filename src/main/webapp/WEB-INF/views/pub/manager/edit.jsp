@@ -7,22 +7,10 @@
   $(function(){
   	battcn.admin.menu${OP.menu}.save = function(obj) {
   		if($("#menu${OP.menu}Form").valid()){
-  			$.ajax({
-				type: "POST", 
-				url: rootPath + "/op_save_${OP.menu}.shtml",
-				data: $('#menu${OP.menu}Form').serializeArray(),
-				dataType: "json",
-				success: function(data){
-					if(data.success) {
-						battcn.closeWindow();
-						$('#admin_menu${OP.menu}_datagrid').bootstrapTable('refresh');
-					}
-					battcn.toastrsAlert({
-		       		     code: data.success ? 'success' :'error',
-		       		     msg: data.msg
-		       		});
-				}
-			});
+  			battcn.ajaxJson({url:rootPath + "/op_save_${OP.menu}",data:$('#menu${OP.menu}Form').serializeArray()},function(){
+  				battcn.closeWindow();
+				$('#admin_menu${OP.menu}_datagrid').bootstrapTable('refresh');
+    		});
   		}
 	}
   });
@@ -30,7 +18,7 @@
 <div class="ibox float-e-margins animated fadeInRight">
 	<div class="ibox-content">
 		<form class="form-horizontal m-t required-validate"
-			id="menu${OP.menu}Form" action="op_save_${OP.menu}.shtml"
+			id="menu${OP.menu}Form" action="op_save_${OP.menu}"
 			method="post">
 			<input type="hidden" name="managerid" value="${dto.managerid}" />
 			<div class="form-group">

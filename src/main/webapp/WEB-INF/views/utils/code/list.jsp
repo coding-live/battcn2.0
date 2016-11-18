@@ -3,7 +3,7 @@
     $(function(){
     	 battcn.ns('battcn.admin.menu${OP.menu}');
     	 $('#admin_menu${OP.menu}_datagrid').bootstrapTable({
-             url:rootPath + '/${MENU.channel}/query.shtml',
+             url:rootPath + '/${MENU.channel}/query',
              height: '100%',
              sortName: 'createDate',
              sortOrder: 'desc',
@@ -65,14 +65,14 @@
     		});
     		return;
     	}
-    	window.location.href = rootPath + '/op_generate_${OP.menu}.shtml?uuid='+rows[0].uuid;
+    	window.location.href = rootPath + '/op_generate_${OP.menu}?uuid='+rows[0].uuid;
 }
     
     //新增
 battcn.admin.menu${OP.menu}.add = function(){
 	battcn.showWindow({
 			title:'增加角色',
-			href:'op_edit_${OP.menu}.shtml',
+			href:'op_edit_${OP.menu}',
 			width:'65%',
 			height:'70%',
 			okhandler:function(){
@@ -103,7 +103,7 @@ battcn.admin.menu${OP.menu}.edit = function(){
 	}
 	battcn.showWindow({
 			title:'编辑管理员',
-			href:rootPath + '/op_edit_${OP.menu}.shtml?tid='+rows[0].uuid,
+			href:rootPath + '/op_edit_${OP.menu}?tid='+rows[0].uuid,
 			width:'65%',
 			height:'70%',
 			okhandler:function(){
@@ -137,7 +137,7 @@ battcn.admin.menu${OP.menu}.edit = function(){
 //			alert();
 			$.ajax({
 		          type: 'post',
-		          url: rootPath + '/op_remove_${OP.menu}.shtml',
+		          url: rootPath + '/op_remove_${OP.menu}',
 		          data: {"ids":ps.join(",")},
 		          dataType: 'json',
 		          success: function (data) {

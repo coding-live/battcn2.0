@@ -3,7 +3,7 @@
     $(function(){
     	 battcn.ns('battcn.admin.menu${OP.menu}');
     	 $('#admin_menu${OP.menu}_datagrid').bootstrapTable({
-             url:rootPath + '/${MENU.channel}/query.shtml',
+             url:rootPath + '/${MENU.channel}/query',
              height: '100%',
              sortName: 'name',
              sortOrder: 'desc',
@@ -46,7 +46,7 @@
 battcn.admin.menu${OP.menu}.add = function(){
 	battcn.showWindow({
 			title:'增加角色',
-			href:'op_edit_${OP.menu}.shtml',
+			href:'op_edit_${OP.menu}',
 			width:'50%',
 			height:'60%',
 			okhandler:function(){
@@ -77,7 +77,7 @@ battcn.admin.menu${OP.menu}.edit = function(){
 	}
 	battcn.showWindow({
 			title:'编辑管理员',
-			href:rootPath + '/op_edit_${OP.menu}.shtml?id='+rows[0].id,
+			href:rootPath + '/op_edit_${OP.menu}?id='+rows[0].id,
 			width:'50%',
 			height:'60%',
 			okhandler:function(){
@@ -108,7 +108,7 @@ battcn.admin.menu${OP.menu}.edit = function(){
 		  	});
 		  	$.ajax({
 		          type: 'post',
-		          url: rootPath + '/op_remove_${OP.menu}.shtml',
+		          url: rootPath + '/op_remove_${OP.menu}',
 		          data: {"ids":ps.join(",")},
 		          dataType: 'json',
 		          success: function (data) {

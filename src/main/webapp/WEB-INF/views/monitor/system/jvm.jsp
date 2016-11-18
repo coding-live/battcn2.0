@@ -22,7 +22,7 @@ $(function(){
 	                    var series = this.series;
 	                     var loadData = function(){
 	                    	$.ajax({
-	                    		url:'${pageContext.request.contextPath}/system/getJVM.shtml',
+	                    		url:'${pageContext.request.contextPath}/system/getJVM',
 	                    		type:'post',
 	                    		async:false,
 	                    		success:function(data){
@@ -82,7 +82,7 @@ $(function(){
 	            data: (function() {
 	            	 var data = [],  time = (new Date()).getTime(), i;
 	            	 $.ajax({
-                 		url:'${pageContext.request.contextPath}/system/getAll.shtml',
+                 		url:'${pageContext.request.contextPath}/system/getAll',
                  		type:'post',
                  		async:false,
                  		success:function(datas){

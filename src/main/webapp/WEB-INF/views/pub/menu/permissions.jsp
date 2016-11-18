@@ -103,7 +103,7 @@ function sub(){
 			async : false, //请勿改成异步，下面有些程序依赖此请数据
 			type : "POST",
 			data : $("#from").serializeArray(),
-			url : rootPath + '/resources/roleRes.shtml',
+			url : rootPath + '/resources/roleRes',
 			success : function(json) {
 				if (json == "success") {
 						layer.confirm('分配成功！是否关闭窗口？', function(index) {
@@ -174,7 +174,7 @@ $.ajax({
 		"userId" : "${param.userId}",
 		"roleId" : "${param.roleId}"
 	},
-	url : rootPath + '/resources/findRes.shtml',
+	url : rootPath + '/resources/findRes',
 	dataType : 'json',
 	success : function(json) 
 	{

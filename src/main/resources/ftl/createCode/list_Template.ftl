@@ -3,7 +3,7 @@
     $(function(){
     	 battcn.ns('battcn.admin.menu${(OP.menu)!'$'+'{OP.menu}'}');
     	 $('#admin_menu${(OP.menu)!'$'+'{OP.menu}'}_datagrid').bootstrapTable({ 
-             url:rootPath + '${(MENU.channel)!'$'+'{MENU.channel}'}/query.shtml',
+             url:rootPath + '${(MENU.channel)!'$'+'{MENU.channel}'}/query',
              height: '100%',
              //sortName: 'createTime',
              //sortOrder: 'desc',

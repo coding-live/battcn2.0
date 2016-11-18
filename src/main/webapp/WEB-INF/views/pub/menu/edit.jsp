@@ -6,24 +6,11 @@ $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_squ
 $(function(){
   	battcn.admin.menu${OP.menu}.save = function(obj) {
   		if($("#menu${OP.menu}Form").valid()){
-  			$.ajax({
-				type: "POST", 
-				url: rootPath + "/op_save_${OP.menu}.shtml",
-				data: $('#menu${OP.menu}Form').serializeArray(),
-				dataType: "json",
-				success: function(data){
-					if(data.success) {
-						battcn.closeWindow();
-						battcn.reloadDiv(rootPath + '/op_list_${OP.menu}.shtml');
-					}
-					battcn.toastrsAlert({
-		       		     code: data.success ? 'success' :'error',
-		       		     msg: data.success ? '成功' :'失败'
-		       		});
-				}
-			});
+  			battcn.ajaxJson({url:rootPath + "/op_save_${OP.menu}",data:$('#menu${OP.menu}Form').serializeArray()},function(){
+  				battcn.closeWindow();
+				battcn.reloadDiv(rootPath + '/op_list_${OP.menu}');
+    		});
   		}
-		 
 	}
   	
   	battcn.admin.menu${OP.menu}.imgs = function (){

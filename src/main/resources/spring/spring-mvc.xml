@@ -15,11 +15,14 @@
      	http://www.springframework.org/schema/aop/spring-aop-4.2.xsd"
 	default-lazy-init="false">
 
-	<!-- 启用spring mvc 注解 -->
-  	<context:annotation-config /> 
-  	<context:component-scan base-package="com.battcn.platform" > 
+  	<!-- <context:component-scan base-package="com.battcn.platform" > 
 			<context:include-filter type="regex" expression=".controller.*"/> 
            	<context:include-filter type="regex" expression=".logAop.*"/> 
+	</context:component-scan> -->
+	<context:component-scan base-package="com.battcn.platform.controller"
+		use-default-filters="false"><!-- base-package 如果多个，用“,”分隔 -->
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 
 	<!-- 启动对@AspectJ注解的支持 通知spring使用cglib而不是jdk的来生成代理方法 AOP可以拦截到Controller -->
@@ -40,7 +43,7 @@
 		<!-- 文件大小最大值 -->
 		<property name="maxUploadSize" value="10485760000" />
 		<!-- 内存中的最大值 -->
-		<property name="maxInMemorySize" value="40960" />
+		<!-- <property name="maxInMemorySize" value="40960" /> -->
 	</bean>
 
 	<import resource="spring-mvc-shiro.xml" />

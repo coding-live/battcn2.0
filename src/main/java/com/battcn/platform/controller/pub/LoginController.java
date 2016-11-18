@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.sql.DriverManager;
 import java.util.Properties;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,6 +22,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.battcn.framework.redis.RedisOperator;
+import com.battcn.platform.cache.SecondLevelCached;
 import com.battcn.platform.constant.Constant;
 import com.battcn.platform.entity.pub.ManagerEntity;
 import com.battcn.platform.service.pub.MenuService;
@@ -33,6 +36,12 @@ import springfox.documentation.annotations.ApiIgnore;
 @ApiIgnore
 public class LoginController
 {
+	
+	@Resource(name = "redisOperator")
+	private RedisOperator redisOperator;
+	private static final int CACHE_DB_INDEX = SecondLevelCached.CACHED_DB_INDEX_CODE_GENERATOR;
+	private static final String CACHE_DB_KEY = SecondLevelCached.SYS_MANAGER_KEY_GENERATOR;
+	
 	@Autowired
 	MenuService menuService;
 
@@ -87,7 +96,7 @@ public class LoginController
 			request.setAttribute("LOGIN_ERROR_MESSAGE",	Constant.LOGIN_ERROR_MESSAGE_USERERROR);
 			return "login";
 		}
-		return "redirect:/index.shtml";
+		return "redirect:/index";
 	}
 
 
@@ -113,6 +122,22 @@ public class LoginController
 			runner.setErrorLogWriter(null);
 			runner.setLogWriter(null);
 			runner.runScript((new InputStreamReader(getClass().getResourceAsStream("/intall.sql"), "UTF-8")));
+			
+			
+			System.out.println("init - redis - method");
+			String tableJson = "{\"byUser\":\"levin\",\"content\":\"Users\",\"processorClass\":\"Users\",\"uuid\":\"DDD961BC7A0A3A4BFA001C51DE229CF3\",\"tablePrefix\":\"T_SYS_\",\"upPackage\":\"users\"}";
+			String column1 = "{\"attributeName\":\"name\",\"uuid\":\"0D972CF0BB5C1E70EEDE7DCB627B8A95\",\"modifyDate\":1477197466979,\"defaultVal\":\"唐亚峰\",\"attributeType\":\"1\",\"remake\":\"名字\"}";
+			String column2 = "{\"attributeName\":\"age\",\"uuid\":\"AA3C2EEC150B9F1B23E488C4D770898D\",\"modifyDate\":1477197466979,\"defaultVal\":\"20\",\"attributeType\":\"2\",\"remake\":\"年龄\"}";
+			String column3 = "{\"attributeName\":\"image\",\"uuid\":\"218EDCBEC9272A7EFD1F55D76B9E2352\",\"modifyDate\":1477197466979,\"defaultVal\":\"头像\",\"attributeType\":\"1\",\"remake\":\"头像\"}";
+			String tid = "DDD961BC7A0A3A4BFA001C51DE229CF3";
+			if(redisOperator!=null)
+			{
+				redisOperator.hset(CACHE_DB_KEY, tid, tableJson, CACHE_DB_INDEX);
+				redisOperator.hset(tid, "0D972CF0BB5C1E70EEDE7DCB627B8A95", column1, CACHE_DB_INDEX);
+				redisOperator.hset(tid, "AA3C2EEC150B9F1B23E488C4D770898D", column2, CACHE_DB_INDEX);
+				redisOperator.hset(tid, "218EDCBEC9272A7EFD1F55D76B9E2352", column3, CACHE_DB_INDEX);
+			}
+			
 		} catch (Exception e)
 		{
 			e.printStackTrace();

@@ -5,7 +5,7 @@ $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_squ
 $(function() {
 	
 	 $('#admin_menu_column_datagrid').bootstrapTable({
-            url:rootPath + '/${MENU.channel}/query.shtml?tid=${dto.uuid != null ? dto.uuid : "false"}',
+            url:rootPath + '/${MENU.channel}/query?tid=${dto.uuid != null ? dto.uuid : "false"}',
             height: '100%',
             sortName: 'createDate',
             sortOrder: 'desc',
@@ -72,31 +72,16 @@ $(function() {
 		   console.info(uuid);
 		   battcn.showWindow({
      			title:'编辑',
-     			href:rootPath + "/${MENU.channel}/column.shtml?tid=${dto.uuid}&cid="+cid,
+     			href:rootPath + "/${MENU.channel}/column?tid=${dto.uuid}&cid="+cid,
      			width:'50%',
      			height:'45%',
      			okhandler:function(){
-     				$.ajax({
-     					type: "POST", 
-     					url: rootPath + "/${MENU.channel}/csave.shtml?tid=${dto.uuid}",
-     					data: $('#menuCodeColumnForm').serializeArray(),
-     					dataType: "json",
-     					success: function(data){
-     						console.info(data);
-     						if(data.success) {
-								//layer.close(index);
-								var str=$(".layui-layer").attr("times");
-								var index=parseInt(str)+1;
-								battcn.closeNestWindow(index);
-
-								$('#admin_menu_column_datagrid').bootstrapTable('refresh');
-     						}
-     						battcn.toastrsAlert({
-     			       		     code: data.success ? 'success' :'error',
-     			       		     msg: data.msg
-     			       		});
-     					}
-     				});
+     				battcn.ajaxJson({url:rootPath + "/${MENU.channel}/csave?tid=${dto.uuid}",data:$('#menuCodeColumnForm').serializeArray()},function(){
+     					var str=$(".layui-layer").attr("times");
+						var index=parseInt(str)+1;
+						battcn.closeNestWindow(index);
+						$('#admin_menu_column_datagrid').bootstrapTable('refresh');
+     	   			});
      			},
      			cancelhandler:function(){
      				battcn.closeWindow();
@@ -106,53 +91,30 @@ $(function() {
 	   
 	   remove = function(uuid)
 	   {
-		   $.ajax({
-		          type: 'post',
-			      url: rootPath + '/op_remove_${OP.menu}.shtml',
-		          data: {"tid":"${dto.uuid}","cid":uuid},
-		          dataType: 'json',
-		          success: function (data) {
-		          	$('#admin_menu_column_datagrid').bootstrapTable('refresh');
-		          	battcn.toastrsAlert({
-	              		 code: data.success ? 'success' :'error',
-	    		       	 msg: data.success ? '成功' :'失败'
-	         		});
-		          }
-		    });
+		   	battcn.ajaxJson({url:rootPath + '/op_remove_${OP.menu}',data:{"tid":"${dto.uuid}","cid":uuid}},function(){
+		   		$('#admin_menu_column_datagrid').bootstrapTable('refresh');
+   			});
 	   }
    	 
-
    	 battcn.admin.menu${OP.menu}.save = function(obj) {
-	  		if($("#menu${OP.menu}Form").valid()){
-	  			if(!CommnUtil.notNull($("#uuid").val()))
-	  			{
-	  				$("#uuid").val(battcn.uuid());
-	  			}
-	  			$.ajax({
-					type: "POST", 
-					url: rootPath + "/op_save_${OP.menu}.shtml",
-					data: $('#menu${OP.menu}Form').serializeArray(),
-					dataType: "json",
-					success: function(data){
-						if(data.success) {
-							battcn.closeWindow();
-							$('#admin_menu${OP.menu}_datagrid').bootstrapTable('refresh');
-						}
-						battcn.toastrsAlert({
-			       		     code: data.success ? 'success' :'error',
-			       		     msg: data.msg
-			       		});
-					}
-				});
-	  		}
+	  	if($("#menu${OP.menu}Form").valid()){
+  			if(!CommnUtil.notNull($("#uuid").val()))
+  			{
+  				$("#uuid").val(battcn.uuid());
+  			}
+  			battcn.ajaxJson({url:rootPath + '/op_save_${OP.menu}',data: $('#menu${OP.menu}Form').serializeArray()},function(){
+  				battcn.closeWindow();
+		   		$('#admin_menu_column_datagrid').bootstrapTable('refresh');
+   			});
 		}
-	});
+   	 };
+});
 	
 	function addAttribute(uuid)
 	{
 		   battcn.showWindow({
   			title:'编辑',
-  			href:rootPath + "/${MENU.channel}/column.shtml?tid=${dto.uuid}",
+  			href:rootPath + "/${MENU.channel}/column?tid=${dto.uuid}",
   			width:'50%',
   			height:'45%',
   			okhandler:function(){
@@ -160,24 +122,12 @@ $(function() {
 	  			{
 	  				$("#cid").val(battcn.uuid());
 	  			}
-  				$.ajax({
-  					type: "POST", 
-  					url: rootPath + "/${MENU.channel}/csave.shtml?tid=${dto.uuid}",
-  					data: $('#menuCodeColumnForm').serializeArray(),
-  					dataType: "json",
-  					success: function(data){
-  						if(data.success) {
-  							$('#admin_menu_column_datagrid').bootstrapTable('refresh'); 
-  							var str=$(".layui-layer").attr("times");
-							var index=parseInt(str)+1;
-							battcn.closeNestWindow(index);
-  						}
-  						battcn.toastrsAlert({
-  			       		     code: data.success ? 'success' :'error',
-  			       		     msg: data.msg
-  			       		});
-  					}
-  				});
+  				battcn.ajaxJson({url:rootPath + "/${MENU.channel}/csave?tid=${dto.uuid}",data: $('#menuCodeColumnForm').serializeArray()},function(){
+  					$('#admin_menu_column_datagrid').bootstrapTable('refresh'); 
+					var str=$(".layui-layer").attr("times");
+					var index=parseInt(str)+1;
+					battcn.closeNestWindow(index);
+  	   			});
   			},
   			cancelhandler:function(){ 
   				battcn.closeWindow();
