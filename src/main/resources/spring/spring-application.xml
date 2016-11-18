@@ -17,14 +17,7 @@
 
 	<task:annotation-driven />
 	<tx:annotation-driven />
-	<!-- <aop:aspectj-autoproxy /> -->
-	<!-- <bean class="com.battcn.framework.springfox.SwaggerConfig" /> -->
-	<!-- <context:component-scan base-package="com.battcn.framework" />
-	<context:component-scan base-package="com.battcn.platform" > 
-           	<context:include-filter type="regex" expression=".service.*"/> 
-           	<context:include-filter type="regex" expression=".cache.*"/>
-           	<context:include-filter type="regex" expression=".task.*"/> 
-	</context:component-scan> -->
+	<bean class="com.battcn.framework.springfox.SwaggerConfig" />
 	<context:component-scan base-package="com.battcn">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />

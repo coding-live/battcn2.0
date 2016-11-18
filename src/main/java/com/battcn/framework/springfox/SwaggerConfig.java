@@ -1,13 +1,10 @@
 package com.battcn.framework.springfox;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -17,23 +14,24 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableWebMvc
 @EnableSwagger2
+@ComponentScan("com.battcn.platform.controller")
 public class SwaggerConfig extends WebMvcConfigurerAdapter
 {
 	
 	
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	/*public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
 		registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
 		super.addResourceHandlers(registry);
-	}
+	}*/
 	
 	
 	@Bean
 	public Docket customDocket()
 	{
-		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
+		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo());/*.select()
 				.apis(RequestHandlerSelectors.basePackage("com.battcn.platform.controller")).paths(PathSelectors.any())
-				.build();
+				.build();*/
 	}
 
 	private ApiInfo apiInfo()
