@@ -14,8 +14,11 @@ import com.battcn.platform.entity.quartz.ScheduleJobEntity;
 import com.battcn.platform.service.quartz.ScheduleJobService;
 import com.github.pagehelper.PageInfo;
 
+import springfox.documentation.annotations.ApiIgnore;
+
 @Controller
 @RequestMapping("/schedule/task")
+@ApiIgnore
 public class ScheduleJobController
 {
 	// 日志记录器
