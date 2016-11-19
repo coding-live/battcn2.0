@@ -7,6 +7,9 @@
 	<packaging>war</packaging>
 	<description>这是battcn2.0版本,扩展权限,和代码优化</description>
 
+
+
+
 	<properties>
 		<!-- jar 版本设置 -->
 		<spring.version>4.2.0.RELEASE</spring.version>
@@ -29,6 +32,31 @@
 		<mybatis-spring.version>1.2.3</mybatis-spring.version>
 		<mysql.version>5.1.26</mysql.version>
 	</properties>
+<!--配置maven阿里云仓库开始,不用去改maven的setting-->
+	<repositories>
+		<repository>
+			<id>public</id>
+			<name>local private nexus</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>public</id>
+			<name>local private nexus</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<!--配置maven阿里云结束-->
 
 	<dependencies>
 		<!-- Spring -->
