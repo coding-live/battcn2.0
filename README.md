@@ -1,4 +1,4 @@
-## battcn系统 ##
+## battcn2.0 如果您喜欢它,请点击 Watch  以及 Star Thanking Very Much##
 
 	前端：采用了BootStrap3.3.5 + BootStrap Table + jQuery2.1
 	后端：Spring4.2+SpringMVC4.2+Mybatis3.2.8 增加PageHelper与通用Mapper方便开发
