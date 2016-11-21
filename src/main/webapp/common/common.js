@@ -178,11 +178,11 @@
 	
 	battcn.reloadDiv = function (url){
 		var o = layer.load();
-			 $('.J_box[data-id="' + url + '"]').html('<div class="loading">加载中,请稍等。。<div>');
-   		     $('.J_box[data-id="' + url + '"]').loadUrl(url,'get',{},function(data) {
-				layer.close(o);
-				$('.J_box[data-id="' + url + '"]').find("div.loading").remove();
-			}); 
+		 $(".J_mainContent div.J_box:visible").html('<div class="loading">加载中,请稍等。。<div>');
+		 $(".J_mainContent div.J_box:visible").loadUrl(url,'get',{},function(data) {
+			layer.close(o);
+			 $(".J_mainContent div.J_box:visible").find("div.loading").remove();
+		}); 
 	}
 	
 	
