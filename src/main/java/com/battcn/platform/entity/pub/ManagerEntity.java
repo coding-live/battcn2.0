@@ -2,7 +2,6 @@ package com.battcn.platform.entity.pub;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,12 +14,11 @@ import javax.persistence.Transient;
 @Table(name = "t_sys_manager")
 public class ManagerEntity implements java.io.Serializable
 {
-
+	@Transient
 	private static final long serialVersionUID = 8828442426459020690L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "managerid", unique = true, nullable = false)
 	private Long managerid;
 	private Integer role;
 	private String account;
@@ -28,7 +26,6 @@ public class ManagerEntity implements java.io.Serializable
 	private String name;
 	private String lastloginip;
 	private Date lastlogintime;
-	@Column(name = "credentialsSalt")
 	private String credentialsSalt;
 	private String locked;
 	private String photo;

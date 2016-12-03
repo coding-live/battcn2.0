@@ -3,7 +3,6 @@ package com.battcn.platform.entity.pub;
 import java.sql.Timestamp;
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,7 +17,6 @@ public class MenuEntity implements java.io.Serializable
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
 	private Integer id;
 	private Integer pid;
 	private String name;

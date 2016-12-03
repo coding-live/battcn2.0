@@ -1,19 +1,19 @@
 package com.battcn.platform.entity.pub;
 
-import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Table(name = "t_sys_role")
 public class RoleEntity implements java.io.Serializable
 {
-
+	@Transient
 	private static final long serialVersionUID = 229605171906270292L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
 	private Integer id;
 	private String name;
 	private String code;

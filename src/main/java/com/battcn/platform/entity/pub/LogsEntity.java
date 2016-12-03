@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.jeecgframework.poi.excel.annotation.Excel;
 import org.jeecgframework.poi.excel.annotation.ExcelTarget;
@@ -15,8 +16,9 @@ import org.jeecgframework.poi.excel.annotation.ExcelTarget;
 @ExcelTarget("courseEntity")
 public class LogsEntity implements java.io.Serializable
 {
-
+	@Transient
 	private static final long serialVersionUID = -1285002170637971804L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)

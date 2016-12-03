@@ -113,6 +113,7 @@
 		<property name="properties">
 			<value>
 				mappers=tk.mybatis.mapper.common.Mapper
+				style=normal<!-- 默认驼峰命名:此处修改为原值,意欲着POJO与SQL对应,可以再POJO加@NameStyle单独处理 -->
 			</value>
 		</property>
 	</bean>

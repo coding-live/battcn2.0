@@ -24,11 +24,8 @@ public class ScheduleJobEntity
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
 	private Integer id;
-	@Column(name = "createTime")
 	private Date createTime;
-	@Column(name = "updateTime")
 	private Date updateTime;
 	/**
 	 * 任务名称
