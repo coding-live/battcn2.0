@@ -48,7 +48,7 @@ public class LoginController
 	@RequestMapping(value = "login", method = RequestMethod.GET, produces = "text/html; charset=utf-8")
 	public String login(HttpServletRequest request)
 	{
-		return "login";
+		return SessionUtil.getSession()!=null ? "redirect:/index" : "login";
 	}
 
 	@RequestMapping("main")
