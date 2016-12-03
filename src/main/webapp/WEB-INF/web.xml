@@ -146,7 +146,7 @@
 		<location>/WEB-INF/exception/404.jsp</location>
 	</error-page>
 	<welcome-file-list>
-		<welcome-file>index</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>login</welcome-file>
 	</welcome-file-list>
 </web-app>

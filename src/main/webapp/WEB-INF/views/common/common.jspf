@@ -59,8 +59,11 @@
 <script type="text/javascript" src="http://static.battcn.com/back/js/init/index.min.js"></script>
 <script type="text/javascript" src="http://static.battcn.com/back/js/init/IN.core.js"></script>
 <script type="text/javascript" src="http://static.battcn.com/back/js/init/IN.init.js"></script>
+
+
 <script src="http://static.battcn.com/back/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="http://static.battcn.com/back/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+
 <script src="http://static.battcn.com/back/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
 <script type="text/javascript" src="${ctx}/common/common.js"></script>
 <script type="text/javascript" src="${ctx}/common/msg.js"></script>
