@@ -5,7 +5,11 @@
 	通用Mapper：Mybatis单表操作基于注解调用API,方便我们开发,提高开发效率
 	权限：采用Spring Shiro做的登陆认证与URL拦截
 	本系统秉承开源精神,欢迎大家使用与开发,遇到任何问题可以 申请QQ群：391619659 找到 解答
-    
+
+注意事项
+------
+        A)运行：右键项目,Run As---->Maven Build 在Goals中输入 jetty:run即可,如遇到redis报错可以忽略,那是本地没有redis引起的,
+            只是无法使用代码生成器,不会影响系统正常运行,如果不想看到错误,请在spring-application.xml中注释掉spring-redis.xml    
 一.服务人群
 ------
 
