@@ -11,7 +11,7 @@ import javax.persistence.Table;
 /**
  * 
  * @Description: 计划任务信息
- * @author snailxr
+ * @author Levin
  * @date 2014年6月6日 下午10:49:43
  */
 @Table(name = "t_sys_schedule_job")
@@ -78,7 +78,7 @@ public class ScheduleJobEntity
 		return id;
 	}
 
-	public void setJobId(Integer id)
+	public void setId(Integer id)
 	{
 		this.id = id;
 	}

@@ -1,5 +1,6 @@
 package com.battcn.platform.service.quartz.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -43,15 +44,22 @@ public class ScheduleJobServiceImpl extends BaseService<ScheduleJobEntity> imple
 	}
 
 	@Override
-	public AjaxJson saveOrUpdate(ScheduleJobEntity entity)
+	public AjaxJson saveOrUpdate(ScheduleJobEntity entity) throws SchedulerException
 	{
 		AjaxJson json = new AjaxJson();
 		if (entity.getId() != null)
 		{
+			ScheduleJobEntity jobEntity = selectByPrimaryKey(entity.getId());
+			jobEntity.setCronExpression(entity.getCronExpression());
 			// 修改
+			scheduleJobMapper.updateByPrimaryKeySelective(jobEntity);
+			schedulerFactory.updateJobCron(jobEntity);
 		} else
 		{
 			// 添加
+			entity.setCreateTime(new Date());
+			scheduleJobMapper.insertSelective(entity);
+			schedulerFactory.addJob(entity);
 		}
 		json.setSuccess(true);
 		json.setMsg("保存成功！");

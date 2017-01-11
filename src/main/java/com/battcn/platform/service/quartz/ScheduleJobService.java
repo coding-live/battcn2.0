@@ -17,6 +17,6 @@ public interface ScheduleJobService
 {
 	PageInfo<ScheduleJobEntity> queryScheduleJobForList(DataGrid grid);
 	ScheduleJobEntity selectByPrimaryKey(Integer id);
-	AjaxJson saveOrUpdate(ScheduleJobEntity entity);
+	AjaxJson saveOrUpdate(ScheduleJobEntity entity) throws SchedulerException;
 	AjaxJson updateJobState(Integer id,String cmd) throws SchedulerException;
 }

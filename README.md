@@ -35,6 +35,15 @@
 	3.欢迎大家使用,本系统不会记录任何使用者的信息,可以放心使用,有Bug可以提交作者(QQ:1837307557)
 	4.如果喜欢可以赞助作者,您的支持就是作者最大的动力
 
+![](http://oe8uway3x.bkt.clouddn.com/1.png)
+![](http://oe8uway3x.bkt.clouddn.com/5.png)
+![](http://oe8uway3x.bkt.clouddn.com/6.png)
+![](http://oe8uway3x.bkt.clouddn.com/7.png)
+![](http://oe8uway3x.bkt.clouddn.com/2.png)
+![](http://oe8uway3x.bkt.clouddn.com/3.png)
+![](http://oe8uway3x.bkt.clouddn.com/4.png)
+
+
 四.开发用例
 ------
 

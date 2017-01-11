@@ -4,9 +4,9 @@ import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -19,14 +19,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-
 import com.battcn.annotation.SystemLog;
 import com.battcn.platform.entity.pub.LogsEntity;
 import com.battcn.platform.service.pub.LogsService;
 import com.battcn.util.CommonUtil;
 import com.battcn.util.SessionUtil;
 import com.battcn.util.http.RequestUtils;
-import com.github.pagehelper.StringUtil;
 
 /**
  * 切点类
@@ -78,7 +76,7 @@ public class LogAopAction
 			map = getControllerMethodDescription(point);
 			// 登录名
 			accountName = SessionUtil.getSession().getAccount();
-			if (StringUtil.isEmpty(accountName))
+			if (StringUtils.isEmpty(accountName))
 			{
 				accountName = "无法获取登录用户信息！";
 			}
@@ -138,7 +136,7 @@ public class LogAopAction
 		{
 			// 登录名
 			accountName = SessionUtil.getSession().getAccount();
-			if (StringUtil.isEmpty(accountName))
+			if (StringUtils.isEmpty(accountName))
 			{
 				accountName = "无法获取登录用户信息！";
 			}
@@ -214,7 +212,7 @@ public class LogAopAction
 					map.put("module", method.getAnnotation(SystemLog.class).module());
 					map.put("methods", method.getAnnotation(SystemLog.class).methods());
 					String de = method.getAnnotation(SystemLog.class).description();
-					if (StringUtil.isEmpty(de))
+					if (StringUtils.isEmpty(de))
 						de = "执行成功!";
 					map.put("description", de);
 					break;
