@@ -108,11 +108,11 @@
 		}  );
 	}) 
 	$("#resources_meny>li").click(function(){
-		battcn.reloadDiv(rootPath+"/pub/menu/list?pageSize="+$(this).text());
+		battcn.reloadDiv("op_list_${OP.menu}?pageSize="+$(this).text());
 	});
 	function loadResources(pageNum)
 	{
-		battcn.reloadDiv(rootPath+"/pub/menu/list?pageNum="+pageNum);
+		battcn.reloadDiv("op_list_${OP.menu}?pageNum="+pageNum);
 	}
 	//删除
 	battcn.admin.menu${OP.menu}.remove = function(){
