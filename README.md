@@ -29,7 +29,7 @@
 
 [群官网：http://www.battcn.com](http://www.battcn.com "群官网：http://www.battcn.com")
 
-[演示地址：http://demo.battcn.com/battcn/](http://demo.battcn.com/battcn/ "演示地址：http://demo.battcn.com/battcn/")
+[演示地址：http://demo.battcn.com/](http://demo.battcn.com/ "演示地址：http://demo.battcn.com/")
 
 三.开发流程
 ------
